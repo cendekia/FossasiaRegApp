@@ -5,6 +5,7 @@ import { AppRoutingModule } from "./app.routing";
 
 import { LoginComponent } from "./modules/login/login.component";
 import { RegisterComponent } from "./modules/register/register.component";
+import { HomeComponent } from "./modules/home/home.component";
 
 @NgModule({
     bootstrap: [
@@ -18,6 +19,7 @@ import { RegisterComponent } from "./modules/register/register.component";
         AppComponent,
         LoginComponent,
         RegisterComponent,
+        HomeComponent
     ],
     providers: [
         // 
