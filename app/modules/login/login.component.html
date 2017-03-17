@@ -1,0 +1,19 @@
+<ScrollView row="0">
+	<StackLayout class="form">
+		<StackLayout class="sidedrawer-center">
+			<StackLayout class="sidedrawer-header">
+				<Image class="sidedrawer-header-image img-circle" src="~/my-app-logo.png"></Image>
+				<Label class="sidedrawer-header-brand" text="FOSSASIA Summit 2017"></Label>
+	  		</StackLayout>
+  		</StackLayout>
+		<StackLayout class="input-field">
+    		<Label class="label" text="Username:"></Label>
+   			<TextField class="input input-border" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+   			<Label class="label" text="Password:"></Label>
+   			<TextField secure="true" class="input input-border"></TextField>
+
+   			<Button class="btn btn-primary" text="Sign In" (tap)="signIn()"></Button>
+			<Button class="btn btn-outline" text="Sign Up" (tap)="signUp()"></Button>
+ 		</StackLayout>
+	</StackLayout>
+</ScrollView>
