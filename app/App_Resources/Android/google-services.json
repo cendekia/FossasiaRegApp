@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "572247605812",
+    "firebase_url": "https://fossasia-reg-app.firebaseio.com",
+    "project_id": "fossasia-reg-app",
+    "storage_bucket": "fossasia-reg-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572247605812:android:dfe3c1a0dd67ee52",
+        "android_client_info": {
+          "package_name": "org.nativescript.FossasiaRegApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572247605812-94i6kobnai60dqn00makegfc3jm3ijtk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK6EIwUhpLzhx8EqL0n7YFGulk4XsA760"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>572247605812-tr6mi1ifj1d0tsoeiil4jh11pinemctc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.572247605812-tr6mi1ifj1d0tsoeiil4jh11pinemctc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAESxF2Y3xTg53nqi0EvHzFC6gFAl3dcjo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>572247605812</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.nativescript.FossasiaRegApp</string>
+	<key>PROJECT_ID</key>
+	<string>fossasia-reg-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fossasia-reg-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:572247605812:ios:dfe3c1a0dd67ee52</string>
+	<key>DATABASE_URL</key>
+	<string>https://fossasia-reg-app.firebaseio.com</string>
+</dict>
+</plist>
