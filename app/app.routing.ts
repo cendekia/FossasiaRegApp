@@ -2,13 +2,16 @@ import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
+import { LoginComponent } from "./modules/login/login.component";
+import { RegisterComponent } from "./modules/register/register.component";
+import { HomeComponent } from "./modules/home/home.component";
+
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
-    { path: "items", component: ItemsComponent },
-    { path: "item/:id", component: ItemDetailComponent },
+    { path: "", redirectTo: "/login", pathMatch: "full" },
+    { path: "login", component: LoginComponent },
+    { path: "register", component: RegisterComponent },
+    { path: "home", component: HomeComponent },
 ];
 
 @NgModule({
@@ -16,3 +19,4 @@ const routes: Routes = [
     exports: [NativeScriptRouterModule]
 })
 export class AppRoutingModule { }
+
