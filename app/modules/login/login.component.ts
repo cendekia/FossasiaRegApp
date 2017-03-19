@@ -22,6 +22,6 @@ export class LoginComponent implements OnInit {
 	}
 
 	signIn() {
-		alert("sign in");
+		this.router.navigate(["/home"]);
 	}
 }
