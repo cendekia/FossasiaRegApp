@@ -28,6 +28,7 @@ export class RegisterComponent {
     github: string;
     facebook: string;
     web: string;   
+    approved: boolean;
     UID: string;
 	public speaker: Speaker;
 	
@@ -53,6 +54,7 @@ export class RegisterComponent {
 		// this.github = "https//github.com/cendekiapp";
 		// this.facebook = "https://www.facebook.com/cendekia.pramana.putra";
 		// this.web = "http://cendekiapp.com";  
+		// this.approved = false;  
 	}
 
 	signUp() {
@@ -62,6 +64,7 @@ export class RegisterComponent {
 				this.firebaseService.login(this.user)
 					.then(() => {
 							this.UID = "";
+							this.approved = false;
 						    this.speaker = new Speaker(
 						    		this.UID,
 								    this.first_name,
@@ -71,7 +74,8 @@ export class RegisterComponent {
 								    this.description,
 								    this.github,
 								    this.facebook,
-								    this.web   
+								    this.web,  
+								    this.approved
 								);
 
 						    let speakerData:string = JSON.stringify(this.speaker);

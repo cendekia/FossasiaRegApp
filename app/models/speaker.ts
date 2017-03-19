@@ -14,6 +14,8 @@ export class Speaker {
         public facebook: string,
         public web: string,
         
+        public approved: boolean,
+        
         // public image_path: string,        
       )
     {}   
