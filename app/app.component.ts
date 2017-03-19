@@ -6,14 +6,4 @@ import firebase = require("nativescript-plugin-firebase");
     selector: "ns-app",
     templateUrl: "app.component.html",
 })
-export class AppComponent {
-
-	constructor() {
-		firebase.login({
-			type: firebase.LoginType.ANONYMOUS
-		}).then((user) => {
-			alert("user id : " + user.uid);
-		}, (error) => {
-			alert("error " + error);
-		})
-	}
+export class AppComponent {}
