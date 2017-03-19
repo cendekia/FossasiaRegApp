@@ -9,48 +9,63 @@ import 'rxjs/add/operator/share';
 
 @Injectable()
 export class FirebaseService {
-  constructor(
-    private ngZone: NgZone,
-    private utils: UtilsService
-  ){}
+    constructor(
+        private ngZone: NgZone,
+        private utils: UtilsService
+    ){}
     
-  
-  
-  register(user: User) {
-    return firebase.createUser({
-      email: user.email,
-      password: user.password
+    register(user: User) {
+        return firebase.createUser({
+        email: user.email,
+        password: user.password
     }).then(
-          function (result:any) {
+        function (result:any) {
             return JSON.stringify(result);
-          },
-          function (errorMessage:any) {
+        },
+        function (errorMessage:any) {
             alert(errorMessage);
-          }
-      )
-  }
+        }
+    )}
 
-  login(user: User) {
-    return firebase.login({
-      type: firebase.LoginType.PASSWORD,
-      email: user.email,
-      password: user.password
-    }).then((result: any) => {
-          BackendService.token = result.uid;
-          return JSON.stringify(result);
-      }, (errorMessage: any) => {
-        alert(errorMessage);
-      });
-  }
+    login(user: User) {
+        return firebase.login({
+            type: firebase.LoginType.PASSWORD,
+            email: user.email,
+            password: user.password
+        }).then((result: any) => {
+            BackendService.token = result.uid;
+            return JSON.stringify(result);
+        }, (errorMessage: any) => {
+            alert(errorMessage);
+        });
+    }
 
-  logout(){
-    BackendService.token = "";
-    firebase.logout();    
-  }
-  
+    logout(){
+        BackendService.token = "";
+        firebase.logout();    
+    }
 
-  handleErrors(error) {
-    console.log(JSON.stringify(error));
-    return Promise.reject(error.message);
-  }
+    add(speakerData: string) {  
+        var speakerParse = JSON.parse(speakerData); 
+        return firebase.push(
+                "/Speakers",
+                {
+                    "first_name": speakerParse.first_name, 
+                    "last_name": speakerParse.last_name, 
+                    "company": speakerParse.company, 
+                    "topic": speakerParse.topic, 
+                    "description": speakerParse.description,
+                    "github": speakerParse.github,
+                    "facebook": speakerParse.facebook,
+                    "web": speakerParse.web,
+                    "UID": BackendService.token
+                }
+            ).then(
+                function (result:any) {
+                return 'Registered!';
+            },
+            function (errorMessage:any) {
+                console.log(errorMessage);
+            }); 
+    }
 }
