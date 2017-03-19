@@ -8,12 +8,12 @@
   		</StackLayout>
 		<StackLayout class="input-field">
     		<Label class="label" text="Username:"></Label>
-   			<TextField class="input input-border" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+   			<TextField height="30" class="input input-border" keyboardType="email" autocorrect="false" autocapitalizationType="none" [(ngModel)]="this.user.email"></TextField>
    			<Label class="label" text="Password:"></Label>
-   			<TextField secure="true" class="input input-border"></TextField>
+   			<TextField height="30" secure="true" class="input input-border" [(ngModel)]="this.user.password"></TextField>
 
-   			<Button class="btn btn-primary" text="Sign In" (tap)="signIn()"></Button>
-			<Button class="btn btn-outline" text="Sign Up" (tap)="signUp()"></Button>
+   			<Button width="200" class="btn btn-primary" text="Sign In" (tap)="signIn()"></Button>
+			<Button width="200" class="btn btn-outline" text="Sign Up" (tap)="signUp()"></Button>
  		</StackLayout>
 	</StackLayout>
 </ScrollView>
